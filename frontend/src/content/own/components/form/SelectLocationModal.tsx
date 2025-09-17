@@ -24,7 +24,7 @@ import {
   GridRow,
   GridSelectionModel
 } from '@mui/x-data-grid';
-import { DataGridProProps, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGridProps, useGridApiRef } from '@mui/x-data-grid';
 import { LocationMiniDTO } from '../../../../models/owns/location';
 import { GroupingCellWithLazyLoading } from '../../Assets/GroupingCellWithLazyLoading';
 import ReplayTwoToneIcon from '@mui/icons-material/ReplayTwoTone';
@@ -170,9 +170,9 @@ const SelectLocationModal: React.FC<SelectLocationModalProps> = ({
     }
   ];
 
-  const groupingColDef: DataGridProProps['groupingColDef'] = {
+  const groupingColDef = {
     headerName: t('hierarchy'),
-    renderCell: (params) => <GroupingCellWithLazyLoading {...params} />
+    renderCell: (params: GridRenderCellParams) => <GroupingCellWithLazyLoading {...params} />
   };
 
   const CustomRow = (props: React.ComponentProps<typeof GridRow>) => {
@@ -288,16 +288,12 @@ const SelectLocationModal: React.FC<SelectLocationModalProps> = ({
       <DialogContent dividers sx={{ p: 1, height: '60vh' }}>
         <Box sx={{ height: '100%', width: '100%' }}>
           <CustomDataGrid
-            pro
-            treeData
-            apiRef={apiRef}
+            pro={false}
             columns={columns}
             rows={filteredLocationsHierarchy}
             loading={loadingGet}
             getRowId={(row) => row.id}
             getRowHeight={() => 'auto'}
-            getTreeDataPath={(row) => row.hierarchy.map(String)}
-            groupingColDef={groupingColDef}
             disableColumnFilter
             checkboxSelection={!single}
             selectionModel={selectionModel}

@@ -21,7 +21,7 @@ import {
   GridRow,
   GridSelectionModel
 } from '@mui/x-data-grid';
-import { DataGridProProps, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGridProps, useGridApiRef } from '@mui/x-data-grid';
 import { AssetMiniDTO } from '../../../../models/owns/asset';
 import { GroupingCellWithLazyLoading } from '../../Assets/GroupingCellWithLazyLoading';
 import ReplayTwoToneIcon from '@mui/icons-material/ReplayTwoTone';
@@ -165,7 +165,7 @@ const SelectAssetModal: React.FC<SelectAssetModalProps> = ({
     }
   ];
 
-  const groupingColDef: DataGridProProps['groupingColDef'] = {
+  const groupingColDef = {
     headerName: t('hierarchy'),
     renderCell: (params) => <GroupingCellWithLazyLoading {...params} />
   };
@@ -283,16 +283,12 @@ const SelectAssetModal: React.FC<SelectAssetModalProps> = ({
       <DialogContent dividers sx={{ p: 1, height: '60vh' }}>
         <Box sx={{ height: '100%', width: '100%' }}>
           <CustomDataGrid
-            pro
-            treeData
-            apiRef={apiRef}
+            pro={false}
             columns={columns}
             rows={filteredAssetsHierarchy}
             loading={loadingGet}
             getRowId={(row) => row.id}
             getRowHeight={() => 'auto'}
-            getTreeDataPath={(row) => row.hierarchy.map(String)}
-            groupingColDef={groupingColDef}
             disableColumnFilter
             checkboxSelection={!single}
             selectionModel={selectionModel}

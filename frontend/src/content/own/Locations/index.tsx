@@ -58,7 +58,7 @@ import Map from '../components/Map';
 import { formatSelect, formatSelectMultiple } from '../../../utils/formatters';
 import { CustomSnackBarContext } from 'src/contexts/CustomSnackBarContext';
 import { CompanySettingsContext } from '../../../contexts/CompanySettingsContext';
-import { DataGridProProps, useGridApiRef } from '@mui/x-data-grid-pro';
+import { useGridApiRef } from '@mui/x-data-grid';
 import { GroupingCellWithLazyLoading } from '../Assets/GroupingCellWithLazyLoading';
 import { AssetRow } from '../../../models/owns/asset';
 import useAuth from '../../../hooks/useAuth';
@@ -510,11 +510,8 @@ function Locations() {
       </DialogContent>
     </Dialog>
   );
-  const groupingColDef: DataGridProProps['groupingColDef'] = {
-    headerName: t('hierarchy'),
-    renderCell: (params) => <GroupingCellWithLazyLoading {...params} />,
-    flex: 0.5
-  };
+  // Note: Tree data functionality is not available in Community version
+  // The grouping column definition has been removed
   const CustomRow = (props: React.ComponentProps<typeof GridRow>) => {
     const rowNode = apiRef.current.getRowNode(props.rowId);
     const theme = useTheme();
@@ -749,18 +746,11 @@ function Locations() {
               >
                 <Box sx={{ width: '95%' }}>
                   <CustomDataGrid
-                    pro
-                    treeData
                     columns={columns}
-                    rows={locationsHierarchy}
+                    rows={locations}
                     loading={loadingGet}
                     apiRef={apiRef}
-                    getTreeDataPath={(row) =>
-                      row.hierarchy.map((id) => id.toString())
-                    }
-                    groupingColDef={groupingColDef}
                     components={{
-                      Row: CustomRow,
                       NoRowsOverlay: () => (
                         <NoRowsMessageWrapper
                           message={t('noRows.location.message')}
@@ -777,7 +767,7 @@ function Locations() {
                       }
                     }}
                     sortingMode="client"
-                    onSortModelChange={(model, details) => {
+                    onSortModelChange={(model) => {
                       const mapper: Record<string, string> = {
                         name: 'name',
                         address: 'address',

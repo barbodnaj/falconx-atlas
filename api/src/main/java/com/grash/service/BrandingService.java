@@ -35,13 +35,13 @@ public class BrandingService {
 
     public BrandConfig getBrandConfig() {
         BrandConfig defaultConfig = BrandConfig.builder()
-                .name("Atlas CMMS")
-                .shortName("Atlas")
-                .website("https://www.atlas-cmms.com")
-                .mail("contact@atlas-cmms.com")
-                .phone("+212 6 30 69 00 50")
-                .addressStreet("410, Boulevard Zerktouni, Hamad, №1")
-                .addressCity("Casablanca-Morocco 20040")
+                .name("davandegan CMMS")
+                .shortName("Davandegan")
+                .website("https://davandegan.com")
+                .mail("info@davandegan.com")
+                .phone("+98 2618 4059")
+                .addressStreet("Pardis Technology Park, 1rd Floor, Unit 1013")
+                .addressCity("Tehran Pardis")
                 .build();
         if (!licenseService.isLicenseValid()) return defaultConfig;
         if (brandRawConfig == null || brandRawConfig.isEmpty()) {

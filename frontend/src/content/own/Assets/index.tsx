@@ -52,7 +52,7 @@ import {
 import Form from '../components/form';
 import * as Yup from 'yup';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { DataGridProProps, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGridProps, useGridApiRef } from '@mui/x-data-grid';
 import { formatAssetValues } from '../../../utils/formatters';
 import { GroupingCellWithLazyLoading } from './GroupingCellWithLazyLoading';
 import { UserMiniDTO } from '../../../models/user';
@@ -728,7 +728,7 @@ function Assets() {
     </Dialog>
   );
 
-  const groupingColDef: DataGridProProps['groupingColDef'] = {
+  const groupingColDef = {
     headerName: t('hierarchy'),
     renderCell: (params) => <GroupingCellWithLazyLoading {...params} />
   };
@@ -812,22 +812,13 @@ function Assets() {
             >
               <Box sx={{ width: '95%' }}>
                 <CustomDataGrid
-                  pro
-                  treeData={view === 'hierarchy'}
+                  pro={false}
                   columns={columns}
                   rows={view === 'hierarchy' ? assetsHierarchy : assets.content}
-                  apiRef={apiRef}
                   getRowHeight={() => 'auto'}
-                  getTreeDataPath={(row) =>
-                    view === 'hierarchy'
-                      ? row.hierarchy.map((id) => id.toString())
-                      : [row.id.toString()]
-                  }
                   disableColumnFilter
                   loading={loadingGet}
-                  groupingColDef={
-                    view === 'hierarchy' ? groupingColDef : undefined
-                  }
+                  {...(view === 'hierarchy' && { groupingColDef })}
                   paginationMode={view === 'hierarchy' ? undefined : 'server'}
                   sortingMode={view === 'hierarchy' ? 'client' : undefined}
                   onSortModelChange={(model) => {
