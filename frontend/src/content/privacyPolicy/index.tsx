@@ -47,11 +47,7 @@ function Overview() {
             Welcome to {brandConfig.name}{' '}
             {IS_ORIGINAL_CLOUD && (
               <>
-                , a solution developed and provided by Intelloop s.a.r.l
-                ("Intelloop", "we", "us", or "our"), located at 410, Boulevard
-                Zerktouni, Hamad, №1- Casablanca-Morocco 20040 (Trade Register:
-                585917, Tax ID: 53800712, ICE: 003298628000019). Intelloop
-                s.a.r.l Au
+               
               </>
             )}
           </Typography>
@@ -540,27 +536,7 @@ function Overview() {
 
           {IS_ORIGINAL_CLOUD && (
             <>
-              <Typography
-                variant="h3"
-                sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}
-              >
-                13. Contact Us
-              </Typography>
-              <Typography paragraph>
-                If you have any questions about this Privacy Policy, please
-                contact us at:
-              </Typography>
-              <Typography sx={{ mb: 1 }}>
-                <strong>Intelloop s.a.r.l</strong>
-              </Typography>
-              <Typography>410, Boulevard Zerktouni, Hamad, №1</Typography>
-              <Typography>Casablanca-Morocco 20040</Typography>
-              <Typography>Email: med.labiad@intel-loop.com</Typography>
-              <Typography sx={{ mb: 3 }}>Phone: +212 6 30 69 00 50</Typography>
-              <Typography>
-                You also have the right to lodge a complaint with the CNDP if
-                you believe that we have violated your data protection rights.
-              </Typography>
+              
             </>
           )}
         </Card>

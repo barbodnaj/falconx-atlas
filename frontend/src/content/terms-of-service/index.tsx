@@ -46,14 +46,7 @@ function TermsOfService() {
           </Typography>
           {IS_ORIGINAL_CLOUD && (
             <Typography paragraph>
-              This Terms of Service Agreement ("Agreement") is a legal agreement
-              between you as an individual or entity ("You" or "Customer") and
-              Intelloop s.a.r.l located at 410, Boulevard Zerktouni, Hamad, N°1-
-              Casablanca-Morocco 20040, Trade Register: 585917, Tax Id:
-              53800712, ICE: 003298628000019 ("Company", "we", "us" or "our"), a
-              Morocco-based management consultancy specializing in industrial
-              Projects launch, Maintenance and Reliability, governing your use
-              of the {brandConfig.name} software and services (the "Software").
+              Welcome to {brandConfig.name}, a solution developed and provided
             </Typography>
           )}
           <Typography paragraph sx={{ fontWeight: 'bold' }}>
@@ -70,10 +63,7 @@ function TermsOfService() {
           <Typography paragraph>
             {IS_ORIGINAL_CLOUD && (
               <>
-                {brandConfig.name} is a solution developed and provided by
-                Intelloop s.a.r.l as part of its ADDAPTIVE Tech services, which
-                guide companies through digital transformation in maintenance
-                and reliability.{' '}
+                {brandConfig.name} 
               </>
             )}
             The Software is offered as a service that may be deployed through
@@ -730,7 +720,7 @@ function TermsOfService() {
                 us at:
               </Typography>
               <Typography sx={{ mb: 1 }}>
-                <strong>Intelloop s.a.r.l</strong>
+                <strong>Davandegan </strong>
               </Typography>
               <Typography>410, Boulevard Zerktouni, Hamad, №1</Typography>
               <Typography>Casablanca-Morocco 20040</Typography>

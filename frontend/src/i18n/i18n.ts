@@ -12,6 +12,8 @@ import plJSON from './translations/pl';
 import ptBRJSON from './translations/pt_BR';
 import itJSON from './translations/it';
 import svJSON from './translations/sv';
+import faJSON from './translations/fa';
+
 import { FlagComponent } from 'country-flag-icons/react/1x1';
 import {
   BR,
@@ -23,7 +25,8 @@ import {
   US,
   SA,
   IT,
-  SE
+  SE,
+  IR,
 } from 'country-flag-icons/react/3x2';
 import { LocaleSingularArg } from '@fullcalendar/react';
 import deLocale from '@fullcalendar/core/locales/de';
@@ -36,8 +39,10 @@ import plLocale from '@fullcalendar/core/locales/pl';
 import enLocale from '@fullcalendar/core/locales/en-gb';
 import itLocale from '@fullcalendar/core/locales/it';
 import svLocale from '@fullcalendar/core/locales/sv';
+import faLocale from '@fullcalendar/core/locales/fa';
+
 import { Locale as DateLocale } from 'date-fns';
-import { fr, de, es, ar, tr, ptBR, pl, enUS, it, sv } from 'date-fns/locale';
+import { fr, de, es, ar, tr, ptBR, pl, enUS, it, sv,faIR } from 'date-fns/locale';
 const resources = {
   de: { translation: deJSON },
   en: { translation: locale },
@@ -50,7 +55,8 @@ const resources = {
   pt_br: { translation: ptBRJSON },
   ar: { translation: arJSON },
   it: { translation: itJSON },
-  sv: { translation: svJSON }
+  sv: { translation: svJSON },
+  fa: { translation: faJSON }
 };
 
 i18n
@@ -59,8 +65,8 @@ i18n
   .init({
     resources,
     keySeparator: false,
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: 'fa',
+    fallbackLng: 'fa',
     react: {
       useSuspense: true
     },
@@ -79,7 +85,8 @@ export type SupportedLanguage =
   | 'PL'
   | 'IT'
   | 'SV'
-  | 'AR';
+  | 'AR'
+  | 'FA';
 
 export const supportedLanguages: {
   code: string;
@@ -143,6 +150,13 @@ export const supportedLanguages: {
     Icon: SA,
     calendarLocale: arLocale,
     dateLocale: ar
+  },
+    {
+    code: 'fa',
+    label: 'Farsi',
+    Icon: IR,
+    calendarLocale: faLocale,
+    dateLocale: faIR
   },
   {
     code: 'it',

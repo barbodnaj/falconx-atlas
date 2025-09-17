@@ -70,10 +70,10 @@ function Sidebar() {
                     style={{ cursor: 'pointer', color: 'white' }}
                     fontSize={13}
                     onClick={() => {
-                      window.open('https://www.intel-loop.com/', '_blank');
+                      window.open('https://davandegan.com/', '_blank');
                     }}
                   >
-                    Powered by Intelloop
+                    Powered by Davandegan
                   </Typography>
                 )}
               </Box>
@@ -129,10 +129,10 @@ function Sidebar() {
                       style={{ cursor: 'pointer', color: 'white' }}
                       fontSize={13}
                       onClick={() => {
-                        window.open('https://www.intel-loop.com/', '_blank');
+                        window.open('https://davandegan.com/', '_blank');
                       }}
                     >
-                      Powered by Intelloop
+                      Powered by Davandegan
                     </Typography>
                   )}
                 </Box>

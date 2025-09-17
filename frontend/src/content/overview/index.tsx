@@ -139,7 +139,7 @@ function Footer() {
         </Grid>
         <Box mt={4} textAlign="center">
           <Typography variant="body2">
-            © {new Date().getFullYear()} Intelloop. All rights reserved.
+            © {new Date().getFullYear()} Davandegan. All rights reserved.
           </Typography>
         </Box>
       </Container>

@@ -733,8 +733,14 @@ function Assets() {
     renderCell: (params) => <GroupingCellWithLazyLoading {...params} />
   };
   const CustomRow = (props: React.ComponentProps<typeof GridRow>) => {
-    const rowNode = apiRef.current.getRowNode(props.rowId);
     const theme = useTheme();
+    
+    // Check if apiRef is available and has the getRowNode method
+    if (!apiRef.current || !apiRef.current.getRowNode) {
+      return <GridRow {...props} />;
+    }
+
+    const rowNode = apiRef.current.getRowNode(props.rowId);
 
     return (
       <GridRow
