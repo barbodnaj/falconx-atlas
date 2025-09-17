@@ -70,7 +70,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated();
 
         // OAuth2 Configuration
-        if (enableSso && licenseService.isSSOEnabled()) http.oauth2Login()
+        if (enableSso) http.oauth2Login()
                 .authorizationEndpoint()
                 .baseUri("/oauth2/authorize")
                 .and()

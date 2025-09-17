@@ -17,7 +17,7 @@ import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 @ConditionalOnProperty(name = "enable-sso", havingValue = "true")
 public class OAuth2ClientRegistrationConfig {
 
-    public enum Oauth2Provider {GOOGLE, MICROSOFT}
+    public enum Oauth2Provider {GOOGLE, MICROSOFT, KEYCLOAK}
 
     @Value("${api.host}")
     private String PUBLIC_API_URL;
@@ -52,6 +52,23 @@ public class OAuth2ClientRegistrationConfig {
                         .jwkSetUri("https://login.microsoftonline.com/common/discovery/v2.0/keys")
                         .userInfoUri("https://graph.microsoft.com/oidc/userinfo")
                         .userNameAttributeName("sub")
+                        .build();
+                break;
+            case KEYCLOAK:
+                String keycloakUrl = System.getenv("KEYCLOAK_URL");
+                String keycloakRealm = System.getenv("KEYCLOAK_REALM");
+                registration = ClientRegistration.withRegistrationId("keycloak")
+                        .clientId(clientId)
+                        .clientSecret(clientSecret)
+                        .redirectUri(PUBLIC_API_URL + "/oauth2/callback/{registrationId}")
+                        .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+                        .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+                        .scope("openid", "profile", "email")
+                        .authorizationUri(keycloakUrl + "/realms/" + keycloakRealm + "/protocol/openid-connect/auth")
+                        .tokenUri(keycloakUrl + "/realms/" + keycloakRealm + "/protocol/openid-connect/token")
+                        .jwkSetUri(keycloakUrl + "/realms/" + keycloakRealm + "/protocol/openid-connect/certs")
+                        .userInfoUri(keycloakUrl + "/realms/" + keycloakRealm + "/protocol/openid-connect/userinfo")
+                        .userNameAttributeName("preferred_username")
                         .build();
                 break;
             default:

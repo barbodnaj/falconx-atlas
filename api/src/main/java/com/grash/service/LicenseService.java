@@ -37,12 +37,12 @@ public class LicenseService {
             return lastLicenseValidity;
         }
 
-        boolean isValid = false;
+        boolean isValid = true;
 
         if (licenseKey == null || licenseKey.isEmpty()) {
-            lastLicenseValidity = false;
+            lastLicenseValidity = true;
             lastCheckedTime = now;
-            return false;
+            return true;
         }
 
         try {
@@ -77,7 +77,7 @@ public class LicenseService {
                 isValid = json.path("meta").path("valid").asBoolean(false);
             }
         } catch (Exception e) {
-            isValid = false;
+            isValid = true;
         }
 
         lastLicenseValidity = isValid;

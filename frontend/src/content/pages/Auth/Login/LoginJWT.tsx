@@ -142,13 +142,22 @@ const LoginJWT: FC = () => {
 
               <Button
                 onClick={() => {
-                  window.location.href = `${apiUrl}oauth2/authorize/${oauth2Provider.toLowerCase()}`;
+                  const provider = oauth2Provider?.toLowerCase();
+                  // Use the Spring Security OAuth2 endpoint for all providers including Keycloak
+                  window.location.href = `${apiUrl}oauth2/authorize/${provider}`;
                 }}
                 fullWidth
                 size="large"
                 variant="outlined"
               >
-                {t('continue_with_sso')}
+                {oauth2Provider === 'KEYCLOAK' 
+                  ? t('continue_with_keycloak')
+                  : oauth2Provider === 'GOOGLE'
+                  ? t('continue_with_google')
+                  : oauth2Provider === 'MICROSOFT'
+                  ? t('continue_with_microsoft')
+                  : t('continue_with_sso')
+                }
               </Button>
             </Box>
           )}

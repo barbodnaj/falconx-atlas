@@ -190,6 +190,12 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
                     email = (String) attributes.get("preferred_username");
                 }
                 break;
+            case "keycloak":
+                email = (String) attributes.get("email");
+                if (email == null) {
+                    email = (String) attributes.get("preferred_username");
+                }
+                break;
             default:
                 throw new CustomException("Unsupported OAuth2 provider", HttpStatus.BAD_REQUEST);
         }
@@ -206,6 +212,8 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
             case "google":
             case "microsoft":
                 return (String) attributes.get("sub");
+            case "keycloak":
+                return (String) attributes.get("sub");
             case "github":
                 return String.valueOf(attributes.get("id"));
             default:
@@ -218,6 +226,13 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
             case "google":
             case "microsoft":
                 return (String) attributes.get("given_name");
+            case "keycloak":
+                String givenName = (String) attributes.get("given_name");
+                if (givenName == null) {
+                    String name = (String) attributes.get("name");
+                    return name != null ? name.split(" ")[0] : "User";
+                }
+                return givenName;
             case "github":
                 String name = (String) attributes.get("name");
                 return name != null ? name.split(" ")[0] : "User";
@@ -240,6 +255,14 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
                     lastName = "";
                 }
                 return lastName;
+            case "keycloak":
+                String familyName = (String) attributes.get("family_name");
+                if (familyName == null) {
+                    String fullName = (String) attributes.get("name");
+                    String[] nameParts = fullName != null ? fullName.split(" ") : new String[]{"User"};
+                    return nameParts.length > 1 ? nameParts[1] : "";
+                }
+                return familyName;
             default:
                 return "";
         }
