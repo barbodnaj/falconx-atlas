@@ -42,23 +42,23 @@ const baseRoutes = [
     path: '/',
     element: <Overview />
   },
-  {
-    path: 'pricing',
-    element: <Pricing />
-  },
-  {
-    path: 'privacy',
-    element: <PrivacyPolicy />
-  },
-  {
-    path: 'deletion-policy',
-    element: <DeletionPolicy />
-  },
-  { path: 'terms-of-service', element: <TermsOfService /> },
-  {
-    path: 'overview',
-    element: <Navigate to="/" replace />
-  },
+  // {
+  //   path: 'pricing',
+  //   element: <Pricing />
+  // },
+  // {
+  //   path: 'privacy',
+  //   element: <PrivacyPolicy />
+  // },
+  // {
+  //   path: 'deletion-policy',
+  //   element: <DeletionPolicy />
+  // },
+  // { path: 'terms-of-service', element: <TermsOfService /> },
+  // {
+  //   path: 'overview',
+  //   element: <Navigate to="/" replace />
+  // },
   {
     path: '*',
     element: <Status404 />

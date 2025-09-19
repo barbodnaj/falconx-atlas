@@ -15,11 +15,11 @@ const router: RouteObject[] = [
     children: accountRoutes
   },
   { path: 'oauth2', children: oauthRoutes },
-  {
-    path: '',
-    element: <BaseLayout />,
-    children: baseRoutes
-  },
+  // {
+  //   path: '',
+  //   element: <BaseLayout />,
+  //   children: baseRoutes
+  // },
   {
     path: 'app',
     element: (
