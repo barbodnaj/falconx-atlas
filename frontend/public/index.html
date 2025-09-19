@@ -10,10 +10,12 @@
   />
   <meta name="theme-color" content="#1975ff" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="%PUBLIC_URL%/fonts/dana/Dana-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="%PUBLIC_URL%/fonts/dana/Dana-Medium.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="%PUBLIC_URL%/fonts/poppins/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="%PUBLIC_URL%/fonts/poppins/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+  
   <title>Atlas CMMS</title>
   <meta
     name="description"

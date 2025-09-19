@@ -1,0 +1,237 @@
+/* Dana Font Family */
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-DemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dana';
+  src: url('../../public/fonts/dana/Dana-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins Font Family */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-200.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins/poppins-v20-latin-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* IRANSans Font Family */
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../../public/fonts/iran-sans/IRANSansWeb_UltraLight.woff2') format('woff2'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_UltraLight.woff') format('woff'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../../public/fonts/iran-sans/IRANSansWeb_Light.woff2') format('woff2'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_Light.woff') format('woff'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../../public/fonts/iran-sans/IRANSansWeb.woff2') format('woff2'),
+       url('../../public/fonts/iran-sans/IRANSansWeb.woff') format('woff'),
+       url('../../public/fonts/iran-sans/IRANSansWeb.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../../public/fonts/iran-sans/IRANSansWeb_Medium.woff2') format('woff2'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_Medium.woff') format('woff'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../../public/fonts/iran-sans/IRANSansWeb_Bold.woff2') format('woff2'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_Bold.woff') format('woff'),
+       url('../../public/fonts/iran-sans/IRANSansWeb_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Lato Font Family */
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-300.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-300italic.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-300italic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-regular.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-italic.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-700.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-700italic.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-700italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-900.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-900.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato/lato-v23-latin-900italic.woff2') format('woff2'),
+       url('../../public/fonts/lato/lato-v23-latin-900italic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
