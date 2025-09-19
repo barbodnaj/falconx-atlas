@@ -34,13 +34,13 @@ const themeColors = {
   input: 'hsl(0, 0%, 89.8%)', // --input: 0 0% 89.8%
   ring: 'hsl(0, 0%, 3.9%)', // --ring: 0 0% 3.9%
   // Sidebar specific colors
-  sidebarBackground: 'hsl(0, 0%, 98%)', // --sidebar-background: 0 0% 98%
-  sidebarForeground: 'hsl(240, 5.3%, 26.1%)', // --sidebar-foreground: 240 5.3% 26.1%
-  sidebarPrimary: 'hsl(240, 5.9%, 10%)', // --sidebar-primary: 240 5.9% 10%
+  sidebarBackground: 'hsl(0, 0%, 95%)', // --sidebar-background: light gray-white
+  sidebarForeground: 'hsl(0, 0%, 10%)', // --sidebar-foreground: black for visibility
+  sidebarPrimary: 'hsl(0, 0%, 10%)', // --sidebar-primary: black for text/icons
   sidebarPrimaryForeground: 'hsl(0, 0%, 98%)', // --sidebar-primary-foreground: 0 0% 98%
-  sidebarAccent: 'hsl(240, 4.8%, 95.9%)', // --sidebar-accent: 240 4.8% 95.9%
-  sidebarAccentForeground: 'hsl(240, 5.9%, 10%)', // --sidebar-accent-foreground: 240 5.9% 10%
-  sidebarBorder: 'hsl(220, 13%, 91%)', // --sidebar-border: 220 13% 91%
+  sidebarAccent: 'hsl(0, 0%, 90%)', // --sidebar-accent: gray-white accent
+  sidebarAccentForeground: 'hsl(0, 0%, 10%)', // --sidebar-accent-foreground: black for text
+  sidebarBorder: 'hsl(0, 0%, 87%)', // --sidebar-border: gray-white border
   sidebarRing: 'hsl(217.2, 91.2%, 59.8%)', // --sidebar-ring: 217.2 91.2% 59.8%
   // Chart colors
   chart1: 'hsl(12, 76%, 61%)', // --chart-1: 12 76% 61%
@@ -437,13 +437,13 @@ export const ShadcnTheme = createTheme({
           '--chart-4': '43 74% 66%',
           '--chart-5': '27 87% 67%',
           '--radius': '0.5rem',
-          '--sidebar-background': '0 0% 98%',
-          '--sidebar-foreground': '240 5.3% 26.1%',
-          '--sidebar-primary': '240 5.9% 10%',
+          '--sidebar-background': '0 0% 95%',
+          '--sidebar-foreground': '0 0% 10%',
+          '--sidebar-primary': '0 0% 10%',
           '--sidebar-primary-foreground': '0 0% 98%',
-          '--sidebar-accent': '240 4.8% 95.9%',
-          '--sidebar-accent-foreground': '240 5.9% 10%',
-          '--sidebar-border': '220 13% 91%',
+          '--sidebar-accent': '0 0% 90%',
+          '--sidebar-accent-foreground': '0 0% 10%',
+          '--sidebar-border': '0 0% 87%',
           '--sidebar-ring': '217.2 91.2% 59.8%',
           '--sidebar-width': '16rem',
           '--sidebar-width-icon': '3rem',
