@@ -1,5 +1,6 @@
 package com.grash.configuration;
 
+import com.grash.security.CustomOAuth2UserService;
 import com.grash.security.JwtTokenFilterConfigurer;
 import com.grash.security.JwtTokenProvider;
 import com.grash.security.OAuth2AuthenticationFailureHandler;
@@ -32,6 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final JwtTokenProvider jwtTokenProvider;
     private final OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
     private final OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
+    private final CustomOAuth2UserService customOAuth2UserService;
     private final LicenseService licenseService;
     @Value("${enable-sso}")
     private boolean enableSso;
@@ -76,6 +78,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .redirectionEndpoint()
                 .baseUri("/oauth2/callback/*")
+                .and()
+                .userInfoEndpoint()
+                .oidcUserService(customOAuth2UserService)
                 .and()
                 .successHandler(oAuth2AuthenticationSuccessHandler)
                 .failureHandler(oAuth2AuthenticationFailureHandler);

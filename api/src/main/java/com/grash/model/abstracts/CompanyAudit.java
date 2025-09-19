@@ -7,11 +7,9 @@ import com.grash.model.Company;
 import com.grash.model.File;
 import com.grash.model.OwnUser;
 import com.grash.model.enums.RoleType;
-import com.grash.security.CustomUserDetail;
+import com.grash.security.AuthenticationHelper;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.persistence.*;
 
@@ -29,9 +27,8 @@ public class CompanyAudit extends Audit {
 
     @PrePersist
     public void beforePersist() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication.getPrincipal() instanceof String) return;
-        OwnUser user = ((CustomUserDetail) authentication.getPrincipal()).getUser();
+        OwnUser user = AuthenticationHelper.getCurrentUser();
+        if (user == null) return;
         Company company = user.getCompany();
         this.setCompany(company);
     }
@@ -39,10 +36,8 @@ public class CompanyAudit extends Audit {
 
     @PostLoad
     public void afterLoad() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication.getPrincipal() instanceof String) return;
-        Object principal = authentication.getPrincipal();
-        OwnUser user = ((CustomUserDetail) principal).getUser();
+        OwnUser user = AuthenticationHelper.getCurrentUser();
+        if (user == null) return;
         Company company = user.getCompany();
         // check if not authorized
         if (!user.getRole().getRoleType().equals(RoleType.ROLE_SUPER_ADMIN) &&

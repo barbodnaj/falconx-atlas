@@ -72,27 +72,39 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
             // Extract user details and generate token
             OAuth2AuthenticationToken authToken = (OAuth2AuthenticationToken) authentication;
             OAuth2User oauth2User = authToken.getPrincipal();
+            
+            OwnUser user;
+            String email;
             Map<String, Object> attributes = oauth2User.getAttributes();
 
-            // Get email from OAuth provider
-            String email = extractEmail(attributes, authToken.getAuthorizedClientRegistrationId());
-
-            // Find or create user
-            Optional<OwnUser> userOptional = userRepository.findByEmailIgnoreCase(email);
-            OwnUser user;
-
-            if (!userOptional.isPresent()) {
-                // Auto-register new users from SSO if they don't exist
-                // In a real implementation, you might want more complex logic here
-                user = createUserFromOAuth(email, attributes, authToken.getAuthorizedClientRegistrationId());
+            // Check if we have our custom OIDC user with an existing user
+            if (oauth2User instanceof CustomOidcUser) {
+                CustomOidcUser customOidcUser = (CustomOidcUser) oauth2User;
+                if (customOidcUser.hasCustomUser()) {
+                    // User already exists and was loaded by our custom service
+                    user = customOidcUser.getCustomUser();
+                    email = user.getEmail();
+                } else {
+                    // New user - need to create from OAuth attributes
+                    email = extractEmail(attributes, authToken.getAuthorizedClientRegistrationId());
+                    user = createUserFromOAuth(email, attributes, authToken.getAuthorizedClientRegistrationId());
+                }
             } else {
-                user = userOptional.get();
-
-                // Update SSO provider details if this is first time login with this provider
-                if (user.getSsoProvider() == null || !user.getSsoProvider().equals(authToken.getAuthorizedClientRegistrationId())) {
-                    user.setSsoProvider(authToken.getAuthorizedClientRegistrationId());
-                    user.setSsoProviderId(extractProviderId(attributes, authToken.getAuthorizedClientRegistrationId()));
-                    userRepository.save(user);
+                // Fallback for non-OIDC providers or if custom service isn't used
+                email = extractEmail(attributes, authToken.getAuthorizedClientRegistrationId());
+                Optional<OwnUser> userOptional = userRepository.findByEmailIgnoreCase(email);
+                
+                if (!userOptional.isPresent()) {
+                    user = createUserFromOAuth(email, attributes, authToken.getAuthorizedClientRegistrationId());
+                } else {
+                    user = userOptional.get();
+                    
+                    // Update SSO provider details if this is first time login with this provider
+                    if (user.getSsoProvider() == null || !user.getSsoProvider().equals(authToken.getAuthorizedClientRegistrationId())) {
+                        user.setSsoProvider(authToken.getAuthorizedClientRegistrationId());
+                        user.setSsoProviderId(extractProviderId(attributes, authToken.getAuthorizedClientRegistrationId()));
+                        userRepository.save(user);
+                    }
                 }
             }
 
