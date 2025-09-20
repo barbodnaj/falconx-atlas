@@ -5,49 +5,52 @@ import i18n from 'src/i18n/i18n';
 import '../fonts.css';
 
 const themeColors = {
-  // Exact shadcn/ui color mapping from HSL values
-  primary: 'hsl(0, 0%, 9%)', // --primary: 0 0% 9%
-  secondary: 'hsl(0, 0%, 96.1%)', // --secondary: 0 0% 96.1%
-  success: 'hsl(173, 58%, 39%)', // --chart-2: 173 58% 39%
-  warning: 'hsl(43, 74%, 66%)', // --chart-4: 43 74% 66%
-  error: 'hsl(0, 84.2%, 60.2%)', // --destructive: 0 84.2% 60.2%
-  info: 'hsl(197, 37%, 24%)', // --chart-3: 197 37% 24%
-  black: 'hsl(0, 0%, 3.9%)', // --foreground: 0 0% 3.9%
-  white: 'hsl(0, 0%, 100%)', // --background: 0 0% 100%
-  primaryAlt: 'hsl(240, 5.9%, 10%)', // --aui-primary: 240 5.9% 10%
-  // Core shadcn colors
-  background: 'hsl(0, 0%, 100%)', // --background: 0 0% 100%
-  foreground: 'hsl(0, 0%, 3.9%)', // --foreground: 0 0% 3.9%
-  card: 'hsl(0, 0%, 100%)', // --card: 0 0% 100%
-  cardForeground: 'hsl(0, 0%, 3.9%)', // --card-foreground: 0 0% 3.9%
-  popover: 'hsl(0, 0%, 100%)', // --popover: 0 0% 100%
-  popoverForeground: 'hsl(0, 0%, 3.9%)', // --popover-foreground: 0 0% 3.9%
-  primaryForeground: 'hsl(0, 0%, 98%)', // --primary-foreground: 0 0% 98%
-  secondaryForeground: 'hsl(0, 0%, 9%)', // --secondary-foreground: 0 0% 9%
-  muted: 'hsl(0, 0%, 96.1%)', // --muted: 0 0% 96.1%
-  mutedForeground: 'hsl(0, 0%, 45.1%)', // --muted-foreground: 0 0% 45.1%
-  accent: 'hsl(0, 0%, 96.1%)', // --accent: 0 0% 96.1%
-  accentForeground: 'hsl(0, 0%, 9%)', // --accent-foreground: 0 0% 9%
-  destructive: 'hsl(0, 84.2%, 60.2%)', // --destructive: 0 84.2% 60.2%
-  destructiveForeground: 'hsl(0, 0%, 98%)', // --destructive-foreground: 0 0% 98%
-  border: 'hsl(0, 0%, 89.8%)', // --border: 0 0% 89.8%
-  input: 'hsl(0, 0%, 89.8%)', // --input: 0 0% 89.8%
-  ring: 'hsl(0, 0%, 3.9%)', // --ring: 0 0% 3.9%
-  // Sidebar specific colors
-  sidebarBackground: '#fcfbfc', // --sidebar-background: light gray-white
-  sidebarForeground: 'hsl(0, 0%, 10%)', // --sidebar-foreground: black for visibility
-  sidebarPrimary: 'hsl(0, 0%, 10%)', // --sidebar-primary: black for text/icons
-  sidebarPrimaryForeground: 'hsl(0, 0%, 98%)', // --sidebar-primary-foreground: 0 0% 98%
-  sidebarAccent: 'hsl(0, 0%, 90%)', // --sidebar-accent: gray-white accent
-  sidebarAccentForeground: 'hsl(0, 0%, 10%)', // --sidebar-accent-foreground: black for text
-  sidebarBorder: '#f2f5f9', // --sidebar-border: gray-white border
-  sidebarRing: 'hsl(217.2, 91.2%, 59.8%)', // --sidebar-ring: 217.2 91.2% 59.8%
-  // Chart colors
-  chart1: 'hsl(12, 76%, 61%)', // --chart-1: 12 76% 61%
-  chart2: 'hsl(173, 58%, 39%)', // --chart-2: 173 58% 39%
-  chart3: 'hsl(197, 37%, 24%)', // --chart-3: 197 37% 24%
-  chart4: 'hsl(43, 74%, 66%)', // --chart-4: 43 74% 66%
-  chart5: 'hsl(27, 87%, 67%)', // --chart-5: 27 87% 67%
+  // Modern shadcn admin dashboard colors - refined and professional
+  primary: 'hsl(222.2, 84%, 4.9%)', // Deep navy for primary actions
+  secondary: 'hsl(210, 40%, 98%)', // Clean light background
+  success: 'hsl(142.1, 76.2%, 36.3%)', // Professional green
+  warning: 'hsl(47.9, 95.8%, 53.1%)', // Vibrant amber
+  error: 'hsl(0, 72.2%, 50.6%)', // Clear red for errors
+  info: 'hsl(221.2, 83.2%, 53.3%)', // Modern blue
+  black: 'hsl(222.2, 84%, 4.9%)', // Rich dark foreground
+  white: 'hsl(0, 0%, 100%)', // Pure white
+  primaryAlt: 'hsl(217.2, 32.6%, 17.5%)', // Darker navy variant
+  
+  // Core shadcn colors - updated for modern admin look
+  background: 'hsl(0, 0%, 100%)', // Clean white background
+  foreground: 'hsl(222.2, 84%, 4.9%)', // Rich dark text
+  card: 'hsl(0, 0%, 100%)', // White cards
+  cardForeground: 'hsl(222.2, 84%, 4.9%)', // Dark text on cards
+  popover: 'hsl(0, 0%, 100%)', // White popover
+  popoverForeground: 'hsl(222.2, 84%, 4.9%)', // Dark popover text
+  primaryForeground: 'hsl(210, 40%, 98%)', // Light text on primary
+  secondaryForeground: 'hsl(222.2, 84%, 4.9%)', // Dark text on secondary
+  muted: 'hsl(210, 40%, 96%)', // Subtle muted background
+  mutedForeground: 'hsl(215.4, 16.3%, 46.9%)', // Refined muted text
+  accent: 'hsl(210, 40%, 96%)', // Light accent
+  accentForeground: 'hsl(222.2, 84%, 4.9%)', // Dark accent text
+  destructive: 'hsl(0, 72.2%, 50.6%)', // Error red
+  destructiveForeground: 'hsl(210, 40%, 98%)', // Light text on destructive
+  border: 'hsl(214.3, 31.8%, 91.4%)', // Subtle borders
+  input: 'hsl(214.3, 31.8%, 91.4%)', // Input background
+  ring: 'hsl(222.2, 84%, 4.9%)', // Focus ring
+  
+  // Enhanced sidebar colors for modern admin look
+  sidebarBackground: 'hsl(0, 0%, 100%)', // Clean white sidebar
+  sidebarForeground: 'hsl(215.4, 16.3%, 46.9%)', // Muted text
+  sidebarPrimary: 'hsl(222.2, 84%, 4.9%)', // Dark primary
+  sidebarPrimaryForeground: 'hsl(210, 40%, 98%)', // Light on primary
+  sidebarAccent: 'hsl(210, 40%, 96%)', // Light accent
+  sidebarAccentForeground: 'hsl(222.2, 84%, 4.9%)', // Dark accent text
+  sidebarBorder: 'hsl(214.3, 31.8%, 91.4%)', // Subtle border
+  sidebarRing: 'hsl(221.2, 83.2%, 53.3%)', // Blue ring
+  
+  // Modern chart colors - professional palette
+  chart1: 'hsl(221.2, 83.2%, 53.3%)', // Modern blue
+  chart2: 'hsl(142.1, 76.2%, 36.3%)', // Professional green  
+  chart3: 'hsl(47.9, 95.8%, 53.1%)', // Vibrant amber
+  chart4: 'hsl(0, 72.2%, 50.6%)', // Clear red
+  chart5: 'hsl(262.1, 83.3%, 57.8%)', // Purple accent
   ...customColors
 };
 
@@ -95,7 +98,17 @@ const colors = {
       menuItemBgActive: themeColors.sidebarAccent,
       menuItemIconColor: themeColors.sidebarForeground,
       menuItemIconColorActive: themeColors.sidebarPrimary,
-      menuItemHeadingColor: themeColors.sidebarPrimary
+      menuItemHeadingColor: themeColors.sidebarPrimary,
+      // Enhanced sidebar styling for modern admin look
+      borderRight: `1px solid ${themeColors.sidebarBorder}`,
+      padding: '1rem',
+      menuItemPadding: '0.5rem 0.75rem',
+      menuItemBorderRadius: '0.375rem',
+      menuItemFontWeight: '500',
+      menuItemFontSize: '0.875rem',
+      menuItemMargin: '0.125rem 0',
+      sectionSpacing: '1.5rem',
+      logoSpacing: '1.5rem'
     }
   },
   alpha: {
@@ -356,10 +369,11 @@ export const ShadcnTheme = createTheme({
   },
   typography: {
     fontFamily: [
+      'Inter',
       'Dana',
-      'Poppins',
+      'Poppins', 
       'IRANSans',
-      'Lato',
+      'system-ui',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -368,86 +382,121 @@ export const ShadcnTheme = createTheme({
       'Arial',
       'sans-serif'
     ].join(','),
+    // Modern typography scale for admin dashboard
     h1: {
-      fontSize: '2.25rem', // text-4xl
-      fontWeight: 700,
-      lineHeight: 1.2
+      fontSize: '2.25rem', // 36px - Large headings
+      fontWeight: 800,
+      lineHeight: 1.1,
+      letterSpacing: '-0.025em',
+      color: themeColors.foreground
     },
     h2: {
-      fontSize: '1.875rem', // text-3xl
-      fontWeight: 600,
-      lineHeight: 1.3
+      fontSize: '1.875rem', // 30px - Section headings
+      fontWeight: 700,
+      lineHeight: 1.2,
+      letterSpacing: '-0.025em',
+      color: themeColors.foreground
     },
     h3: {
-      fontSize: '1.5rem', // text-2xl
+      fontSize: '1.5rem', // 24px - Subsection headings
       fontWeight: 600,
-      lineHeight: 1.4
+      lineHeight: 1.3,
+      letterSpacing: '-0.02em',
+      color: themeColors.foreground
     },
     h4: {
-      fontSize: '1.25rem', // text-xl
+      fontSize: '1.25rem', // 20px - Card titles
       fontWeight: 600,
-      lineHeight: 1.4
+      lineHeight: 1.4,
+      letterSpacing: '-0.01em',
+      color: themeColors.foreground
     },
     h5: {
-      fontSize: '1.125rem', // text-lg
+      fontSize: '1.125rem', // 18px - Small headings
       fontWeight: 600,
-      lineHeight: 1.5
+      lineHeight: 1.4,
+      color: themeColors.foreground
     },
     h6: {
-      fontSize: '1rem', // text-base
+      fontSize: '1rem', // 16px - Smallest headings
       fontWeight: 600,
-      lineHeight: 1.5
+      lineHeight: 1.5,
+      color: themeColors.foreground
     },
     body1: {
-      fontSize: '0.875rem', // text-sm
-      lineHeight: 1.5
+      fontSize: '0.875rem', // 14px - Default body text
+      fontWeight: 400,
+      lineHeight: 1.6,
+      color: themeColors.foreground
     },
     body2: {
-      fontSize: '0.75rem', // text-xs
-      lineHeight: 1.4
+      fontSize: '0.8125rem', // 13px - Secondary text
+      fontWeight: 400,
+      lineHeight: 1.5,
+      color: themeColors.mutedForeground
+    },
+    caption: {
+      fontSize: '0.75rem', // 12px - Captions and labels
+      fontWeight: 500,
+      lineHeight: 1.4,
+      color: themeColors.mutedForeground,
+      letterSpacing: '0.025em'
+    },
+    overline: {
+      fontSize: '0.75rem', // 12px - Overline text
+      fontWeight: 600,
+      lineHeight: 1.4,
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+      color: themeColors.mutedForeground
     }
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         ':root': {
-          // Shadcn CSS custom properties
+          // Modern shadcn admin CSS custom properties
           '--background': '0 0% 100%',
-          '--foreground': '0 0% 3.9%',
+          '--foreground': '222.2 84% 4.9%', // Updated to modern navy
           '--card': '0 0% 100%',
-          '--card-foreground': '0 0% 3.9%',
+          '--card-foreground': '222.2 84% 4.9%',
           '--popover': '0 0% 100%',
-          '--popover-foreground': '0 0% 3.9%',
-          '--primary': '0 0% 9%',
-          '--primary-foreground': '0 0% 98%',
-          '--secondary': '0 0% 96.1%',
-          '--secondary-foreground': '0 0% 9%',
-          '--muted': '0 0% 96.1%',
-          '--muted-foreground': '0 0% 45.1%',
-          '--accent': '0 0% 96.1%',
-          '--accent-foreground': '0 0% 9%',
-          '--destructive': '0 84.2% 60.2%',
-          '--destructive-foreground': '0 0% 98%',
-          '--border': '0 0% 89.8%',
-          '--input': '0 0% 89.8%',
-          '--ring': '0 0% 3.9%',
-          '--chart-1': '12 76% 61%',
-          '--chart-2': '173 58% 39%',
-          '--chart-3': '197 37% 24%',
-          '--chart-4': '43 74% 66%',
-          '--chart-5': '27 87% 67%',
-          '--radius': '0.5rem',
-          '--sidebar-background': '0 0% 95%',
-          '--sidebar-foreground': '0 0% 10%',
-          '--sidebar-primary': '0 0% 10%',
-          '--sidebar-primary-foreground': '0 0% 98%',
-          '--sidebar-accent': '0 0% 90%',
-          '--sidebar-accent-foreground': '0 0% 10%',
-          '--sidebar-border': '0 0% 87%',
-          '--sidebar-ring': '217.2 91.2% 59.8%',
+          '--popover-foreground': '222.2 84% 4.9%',
+          '--primary': '222.2 84% 4.9%', // Modern navy primary
+          '--primary-foreground': '210 40% 98%',
+          '--secondary': '210 40% 98%', // Clean light secondary
+          '--secondary-foreground': '222.2 84% 4.9%',
+          '--muted': '210 40% 96%', // Refined muted
+          '--muted-foreground': '215.4 16.3% 46.9%',
+          '--accent': '210 40% 96%',
+          '--accent-foreground': '222.2 84% 4.9%',
+          '--destructive': '0 72.2% 50.6%',
+          '--destructive-foreground': '210 40% 98%',
+          '--border': '214.3 31.8% 91.4%', // Subtle modern border
+          '--input': '214.3 31.8% 91.4%',
+          '--ring': '222.2 84% 4.9%',
+          // Modern chart colors
+          '--chart-1': '221.2 83.2% 53.3%', // Modern blue
+          '--chart-2': '142.1 76.2% 36.3%', // Professional green
+          '--chart-3': '47.9 95.8% 53.1%', // Vibrant amber
+          '--chart-4': '0 72.2% 50.6%', // Clear red
+          '--chart-5': '262.1 83.3% 57.8%', // Purple accent
+          '--radius': '0.75rem', // Increased for modern look
+          // Enhanced sidebar variables
+          '--sidebar-background': '0 0% 100%', // Clean white
+          '--sidebar-foreground': '215.4 16.3% 46.9%', // Muted text
+          '--sidebar-primary': '222.2 84% 4.9%', // Dark primary
+          '--sidebar-primary-foreground': '210 40% 98%',
+          '--sidebar-accent': '210 40% 96%', // Light accent
+          '--sidebar-accent-foreground': '222.2 84% 4.9%',
+          '--sidebar-border': '214.3 31.8% 91.4%', // Subtle border
+          '--sidebar-ring': '221.2 83.2% 53.3%', // Blue ring
           '--sidebar-width': '16rem',
           '--sidebar-width-icon': '3rem',
-          // Tailwind breakpoints
+          // Modern spacing and sizing
+          '--header-height': '4rem',
+          '--content-padding': '1.5rem',
+          // Responsive breakpoints
           '--sm': '640px',
           '--md': '768px',
           '--lg': '1024px',
@@ -515,20 +564,28 @@ export const ShadcnTheme = createTheme({
         root: {
           fontWeight: 500,
           textTransform: 'none',
-          borderRadius: '6px',
+          borderRadius: '0.375rem', // 6px - consistent with shadcn
           fontSize: '0.875rem',
-          padding: '8px 16px',
+          padding: '0.5rem 1rem', // More consistent padding
           minWidth: 'auto',
           boxShadow: 'none',
+          lineHeight: 1.25,
+          transition: 'all 0.2s ease-in-out',
           '&:hover': {
             boxShadow: 'none'
+          },
+          '&:focus-visible': {
+            outline: `2px solid ${themeColors.ring}`,
+            outlineOffset: '2px'
           }
         },
         contained: {
           backgroundColor: themeColors.primary,
           color: themeColors.primaryForeground,
+          border: `1px solid ${themeColors.primary}`,
           '&:hover': {
-            backgroundColor: alpha(themeColors.primary, 0.9)
+            backgroundColor: alpha(themeColors.primary, 0.9),
+            borderColor: alpha(themeColors.primary, 0.9)
           }
         },
         outlined: {
@@ -542,19 +599,34 @@ export const ShadcnTheme = createTheme({
         },
         text: {
           color: themeColors.foreground,
+          padding: '0.5rem 0.75rem',
           '&:hover': {
             backgroundColor: themeColors.accent
           }
+        },
+        sizeSmall: {
+          padding: '0.375rem 0.75rem',
+          fontSize: '0.8125rem'
+        },
+        sizeLarge: {
+          padding: '0.625rem 1.25rem',
+          fontSize: '0.9375rem'
         }
       }
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: '8px',
+          borderRadius: '0.75rem', // Modern rounded corners
           border: `1px solid ${themeColors.border}`,
-          boxShadow: colors.shadows.cardSm,
-          backgroundColor: themeColors.white
+          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)', // Subtle modern shadow
+          backgroundColor: themeColors.card,
+          padding: '1.5rem', // Consistent padding
+          transition: 'all 0.2s ease-in-out',
+          '&:hover': {
+            boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)', // Elevated hover state
+            borderColor: alpha(themeColors.border, 0.8)
+          }
         }
       }
     },
@@ -562,22 +634,30 @@ export const ShadcnTheme = createTheme({
       styleOverrides: {
         root: {
           backgroundImage: 'none',
-          backgroundColor: themeColors.white
+          backgroundColor: themeColors.card,
+          borderRadius: '0.75rem', // Consistent border radius
+          border: `1px solid ${themeColors.border}`,
+          transition: 'all 0.2s ease-in-out'
         },
         elevation0: {
-          boxShadow: 'none'
+          boxShadow: 'none',
+          border: `1px solid ${themeColors.border}`
         },
         elevation1: {
-          boxShadow: colors.shadows.card
+          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+          border: `1px solid ${themeColors.border}`
         },
         elevation2: {
-          boxShadow: colors.shadows.cardSm
+          boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+          border: `1px solid ${themeColors.border}`
         },
         elevation24: {
-          boxShadow: colors.shadows.cardLg
+          boxShadow: '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+          border: `1px solid ${themeColors.border}`
         },
         outlined: {
-          border: `1px solid ${themeColors.border}`
+          border: `1px solid ${themeColors.border}`,
+          boxShadow: 'none'
         }
       }
     },
@@ -585,17 +665,37 @@ export const ShadcnTheme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiOutlinedInput-root': {
-            borderRadius: '6px',
-            backgroundColor: themeColors.input,
+            borderRadius: '0.375rem', // 6px
+            backgroundColor: themeColors.background,
+            fontSize: '0.875rem',
+            transition: 'all 0.2s ease-in-out',
             '& fieldset': {
-              borderColor: themeColors.border
+              borderColor: themeColors.border,
+              borderWidth: '1px'
             },
             '&:hover fieldset': {
-              borderColor: themeColors.ring
+              borderColor: darken(themeColors.border, 0.1)
             },
             '&.Mui-focused fieldset': {
-              borderColor: themeColors.primary,
-              borderWidth: '2px'
+              borderColor: themeColors.ring,
+              borderWidth: '2px',
+              outline: `2px solid ${alpha(themeColors.ring, 0.1)}`,
+              outlineOffset: '0px'
+            },
+            '& input': {
+              padding: '0.5rem 0.75rem',
+              '&::placeholder': {
+                color: themeColors.mutedForeground,
+                opacity: 1
+              }
+            }
+          },
+          '& .MuiInputLabel-root': {
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            color: themeColors.foreground,
+            '&.Mui-focused': {
+              color: themeColors.primary
             }
           }
         }
@@ -604,17 +704,22 @@ export const ShadcnTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          borderRadius: '6px',
-          backgroundColor: themeColors.input,
+          borderRadius: '0.375rem',
+          backgroundColor: themeColors.background,
+          fontSize: '0.875rem',
+          transition: 'all 0.2s ease-in-out',
           '& .MuiOutlinedInput-notchedOutline': {
             borderColor: themeColors.border
           },
           '&:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: themeColors.ring
+            borderColor: darken(themeColors.border, 0.1)
           },
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: themeColors.primary,
+            borderColor: themeColors.ring,
             borderWidth: '2px'
+          },
+          '& input': {
+            padding: '0.5rem 0.75rem'
           }
         }
       }
@@ -622,8 +727,10 @@ export const ShadcnTheme = createTheme({
     MuiTableContainer: {
       styleOverrides: {
         root: {
-          borderRadius: '8px',
-          border: `1px solid ${themeColors.border}`
+          borderRadius: '0.75rem', // 12px for modern look
+          border: `1px solid ${themeColors.border}`,
+          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+          overflow: 'hidden'
         }
       }
     },
@@ -631,7 +738,8 @@ export const ShadcnTheme = createTheme({
       styleOverrides: {
         root: {
           borderCollapse: 'separate',
-          borderSpacing: 0
+          borderSpacing: 0,
+          width: '100%'
         }
       }
     },
@@ -645,7 +753,9 @@ export const ShadcnTheme = createTheme({
             fontSize: '0.75rem',
             textTransform: 'uppercase',
             letterSpacing: '0.05em',
-            color: themeColors.mutedForeground
+            color: themeColors.mutedForeground,
+            padding: '0.75rem 1rem',
+            height: '3rem'
           }
         }
       }
@@ -655,23 +765,61 @@ export const ShadcnTheme = createTheme({
         root: {
           borderBottom: `1px solid ${themeColors.border}`,
           fontSize: '0.875rem',
-          padding: '12px 16px'
+          padding: '0.75rem 1rem',
+          color: themeColors.foreground,
+          '&:last-child': {
+            paddingRight: '1rem'
+          },
+          '&:first-of-type': {
+            paddingLeft: '1rem'
+          }
+        },
+        head: {
+          backgroundColor: themeColors.muted,
+          fontWeight: 600
+        }
+      }
+    },
+    MuiTableRow: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: alpha(themeColors.muted, 0.5)
+          },
+          '&:last-child .MuiTableCell-root': {
+            borderBottom: 'none'
+          }
         }
       }
     },
     MuiChip: {
       styleOverrides: {
         root: {
-          borderRadius: '6px',
+          borderRadius: '9999px', // Fully rounded for modern pill look
           fontSize: '0.75rem',
-          height: '24px'
+          height: '1.5rem', // 24px
+          fontWeight: 500,
+          border: `1px solid ${themeColors.border}`,
+          transition: 'all 0.2s ease-in-out'
         },
         filled: {
           backgroundColor: themeColors.muted,
           color: themeColors.foreground,
           '&:hover': {
-            backgroundColor: darken(themeColors.muted, 0.1)
+            backgroundColor: darken(themeColors.muted, 0.05)
           }
+        },
+        outlined: {
+          borderColor: themeColors.border,
+          color: themeColors.foreground,
+          backgroundColor: 'transparent',
+          '&:hover': {
+            backgroundColor: themeColors.muted
+          }
+        },
+        sizeSmall: {
+          height: '1.25rem', // 20px
+          fontSize: '0.6875rem' // 11px
         }
       }
     },
@@ -679,7 +827,8 @@ export const ShadcnTheme = createTheme({
       styleOverrides: {
         root: {
           borderColor: themeColors.border,
-          opacity: 1
+          opacity: 1,
+          margin: '0.5rem 0'
         }
       }
     },
@@ -687,20 +836,31 @@ export const ShadcnTheme = createTheme({
       styleOverrides: {
         root: {
           '&.MuiButtonBase-root': {
-            borderRadius: '6px',
-            margin: '2px 0',
+            borderRadius: '0.375rem', // 6px
+            margin: '0.125rem 0', // 2px
+            padding: '0.5rem 0.75rem',
             color: themeColors.mutedForeground,
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            transition: 'all 0.2s ease-in-out',
             '&:hover': {
-              backgroundColor: themeColors.muted,
+              backgroundColor: themeColors.accent,
               color: themeColors.foreground
             },
             '&.Mui-selected': {
-              backgroundColor: themeColors.muted,
-              color: themeColors.foreground,
+              backgroundColor: themeColors.accent,
+              color: themeColors.primary,
+              fontWeight: 600,
               '&:hover': {
-                backgroundColor: darken(themeColors.muted, 0.05)
+                backgroundColor: darken(themeColors.accent, 0.05)
               }
             }
+          }
+        },
+        button: {
+          '&:focus-visible': {
+            outline: `2px solid ${themeColors.ring}`,
+            outlineOffset: '2px'
           }
         }
       }
@@ -715,19 +875,43 @@ export const ShadcnTheme = createTheme({
     MuiAvatar: {
       styleOverrides: {
         root: {
-          fontSize: 14,
-          fontWeight: 500,
-          borderRadius: '6px'
+          fontSize: '0.875rem', // 14px
+          fontWeight: 600,
+          borderRadius: '50%', // Full circle for avatars
+          border: `2px solid ${themeColors.border}`,
+          backgroundColor: themeColors.muted,
+          color: themeColors.foreground
+        },
+        rounded: {
+          borderRadius: '0.5rem' // 8px for rounded square avatars
+        },
+        square: {
+          borderRadius: '0.25rem' // 4px for square avatars
         }
       }
     },
     MuiBadge: {
       styleOverrides: {
         badge: {
-          borderRadius: '6px',
-          fontSize: '0.75rem',
-          minWidth: '20px',
-          height: '20px'
+          borderRadius: '9999px', // Fully rounded
+          fontSize: '0.6875rem', // 11px
+          fontWeight: 600,
+          minWidth: '1.25rem', // 20px
+          height: '1.25rem', // 20px
+          padding: '0 0.25rem',
+          border: `2px solid ${themeColors.background}`
+        },
+        colorPrimary: {
+          backgroundColor: themeColors.primary,
+          color: themeColors.primaryForeground
+        },
+        colorSecondary: {
+          backgroundColor: themeColors.secondary,
+          color: themeColors.secondaryForeground
+        },
+        colorError: {
+          backgroundColor: themeColors.error,
+          color: themeColors.destructiveForeground
         }
       }
     }
