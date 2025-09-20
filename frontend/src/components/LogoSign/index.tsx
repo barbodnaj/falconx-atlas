@@ -19,7 +19,7 @@ const LogoWrapper = styled(Link)(
         display: flex;
         text-decoration: none;
         align-items: center;
-        width: 53px;
+        width: 120px;
         margin: 0 auto;
         font-weight: ${theme.typography.fontWeightBold};
 `
@@ -27,8 +27,11 @@ const LogoWrapper = styled(Link)(
 
 const LogoSignWrapper = styled(Box)(
   () => `
-        width: 52px;
-        height: 52px;
+        width: 120px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 `
 );
 
@@ -55,8 +58,8 @@ interface OwnProps {
 function Logo({ white }: OwnProps) {
   const { t }: { t: any } = useTranslation();
   const theme = useTheme();
-  const width = 60;
-  const height = 60;
+  const width = 100;
+  const height = 70;
   const mobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { logo, name: brandName } = useBrand();
 
@@ -66,8 +69,13 @@ function Logo({ white }: OwnProps) {
         <LogoSignWrapper>
           <img
             src={white ? logo.white : logo.dark}
-            width={`${width * (mobile ? 0.7 : 1)}px`}
-            height={`${height * (mobile ? 0.7 : 1)}px`}
+            width={`${width * (mobile ? 0.8 : 1)}px`}
+            height={`${height * (mobile ? 0.8 : 1)}px`}
+            style={{
+              objectFit: 'contain',
+              maxWidth: '100%',
+              maxHeight: '100%'
+            }}
           />
         </LogoSignWrapper>
       </LogoWrapper>

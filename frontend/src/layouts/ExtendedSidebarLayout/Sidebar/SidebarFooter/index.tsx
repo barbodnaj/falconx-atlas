@@ -63,13 +63,13 @@ function SidebarFooter() {
         <LightTooltip placement="top" arrow title={t('upgrade_now')}>
           <IconButton
             sx={{
-              background: `${theme.colors.alpha.trueWhite[10]}`,
-              color: `${theme.colors.alpha.trueWhite[70]}`,
+              background: `${alpha(theme.sidebar.textColor, 0.1)}`,
+              color: `${theme.sidebar.textColor}`,
               transition: `${theme.transitions.create(['all'])}`,
 
               '&:hover': {
-                background: `${alpha(theme.colors.alpha.trueWhite[100], 0.2)}`,
-                color: `${theme.colors.alpha.trueWhite[100]}`
+                background: `${alpha(theme.sidebar.textColor, 0.2)}`,
+                color: `${theme.sidebar.textColor}`
               }
             }}
             // onClick={requestSubscriptionChange}
@@ -83,13 +83,13 @@ function SidebarFooter() {
       <LightTooltip placement="top" arrow title={t('documentation')}>
         <IconButton
           sx={{
-            background: `${theme.colors.alpha.trueWhite[10]}`,
-            color: `${theme.colors.alpha.trueWhite[70]}`,
+            background: `${alpha(theme.sidebar.textColor, 0.1)}`,
+            color: `${theme.sidebar.textColor}`,
             transition: `${theme.transitions.create(['all'])}`,
 
             '&:hover': {
-              background: `${alpha(theme.colors.alpha.trueWhite[100], 0.2)}`,
-              color: `${theme.colors.alpha.trueWhite[100]}`
+              background: `${alpha(theme.sidebar.textColor, 0.2)}`,
+              color: `${theme.sidebar.textColor}`
             }
           }}
           onClick={() => window.open('https://grashjs.github.io/user-guide')}
@@ -100,13 +100,13 @@ function SidebarFooter() {
       <LightTooltip placement="top" arrow title={t('wo_calendar')}>
         <IconButton
           sx={{
-            background: `${theme.colors.alpha.trueWhite[10]}`,
-            color: `${theme.colors.alpha.trueWhite[70]}`,
+            background: `${alpha(theme.sidebar.textColor, 0.1)}`,
+            color: `${theme.sidebar.textColor}`,
             transition: `${theme.transitions.create(['all'])}`,
 
             '&:hover': {
-              background: `${alpha(theme.colors.alpha.trueWhite[100], 0.2)}`,
-              color: `${theme.colors.alpha.trueWhite[100]}`
+              background: `${alpha(theme.sidebar.textColor, 0.2)}`,
+              color: `${theme.sidebar.textColor}`
             }
           }}
           to="/app/work-orders?view=calendar"
@@ -118,13 +118,13 @@ function SidebarFooter() {
       <LightTooltip placement="top" arrow title={t('Logout')}>
         <IconButton
           sx={{
-            background: `${theme.colors.alpha.trueWhite[10]}`,
-            color: `${theme.colors.alpha.trueWhite[70]}`,
+            background: `${alpha(theme.sidebar.textColor, 0.1)}`,
+            color: `${theme.sidebar.textColor}`,
             transition: `${theme.transitions.create(['all'])}`,
 
             '&:hover': {
-              background: `${alpha(theme.colors.alpha.trueWhite[100], 0.2)}`,
-              color: `${theme.colors.alpha.trueWhite[100]}`
+              background: `${alpha(theme.sidebar.textColor, 0.2)}`,
+              color: `${theme.sidebar.textColor}`
             }
           }}
           onClick={handleLogout}

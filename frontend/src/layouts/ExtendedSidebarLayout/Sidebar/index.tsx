@@ -55,28 +55,38 @@ function Sidebar() {
         }}
       >
         <Scrollbar>
-          <Box mt={3}>
+          <Box mt={2} mb={1}>
             <Box
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                flexDirection: 'row'
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 1
               }}
             >
               <Box>
-                <Logo white />
-                {!isWhiteLabeled && (
-                  <Typography
-                    style={{ cursor: 'pointer', color: 'white' }}
-                    fontSize={13}
-                    onClick={() => {
-                      window.open('https://davandegan.com/', '_blank');
-                    }}
-                  >
-                    Powered by Davandegan
-                  </Typography>
-                )}
+                <Logo />
               </Box>
+              {!isWhiteLabeled && (
+                <Typography
+                  fontSize={11}
+                  sx={{ 
+                    textAlign: 'center',
+                    color: theme.sidebar.textColor,
+                    opacity: 0.8,
+                    cursor: 'pointer',
+                    '&:hover': {
+                      opacity: 1
+                    }
+                  }}
+                  onClick={() => {
+                    window.open('https://davandegan.com/', '_blank');
+                  }}
+                >
+                  Powered by Davandegan
+                </Typography>
+              )}
             </Box>
           </Box>
           <Divider
@@ -114,28 +124,38 @@ function Sidebar() {
           }}
         >
           <Scrollbar>
-            <Box mt={3}>
+            <Box mt={2} mb={1}>
               <Box
                 sx={{
                   display: 'flex',
                   justifyContent: 'center',
-                  flexDirection: 'row'
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: 1
                 }}
               >
                 <Box>
-                  <Logo white />
-                  {!isWhiteLabeled && (
-                    <Typography
-                      style={{ cursor: 'pointer', color: 'white' }}
-                      fontSize={13}
-                      onClick={() => {
-                        window.open('https://davandegan.com/', '_blank');
-                      }}
-                    >
-                      Powered by Davandegan
-                    </Typography>
-                  )}
+                  <Logo />
                 </Box>
+                {!isWhiteLabeled && (
+                  <Typography
+                    fontSize={11}
+                    sx={{ 
+                      textAlign: 'center',
+                      color: theme.sidebar.textColor,
+                      opacity: 0.8,
+                      cursor: 'pointer',
+                      '&:hover': {
+                        opacity: 1
+                      }
+                    }}
+                    onClick={() => {
+                      window.open('https://davandegan.com/', '_blank');
+                    }}
+                  >
+                    Powered by Davandegan
+                  </Typography>
+                )}
               </Box>
             </Box>
             <Divider

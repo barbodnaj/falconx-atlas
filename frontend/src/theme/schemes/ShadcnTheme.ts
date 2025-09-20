@@ -574,6 +574,47 @@ export const ShadcnTheme = createTheme({
         },
         '*, *::before, *::after': {
           boxSizing: 'inherit'
+        },
+        // Custom sidebar styling with margin and proper colors
+        '.sidebar': {
+          margin: '1rem', // Add margin around the sidebar
+          borderRadius: '0.75rem', // Rounded corners for the sidebar
+          overflow: 'hidden' // Ensure content doesn't spill outside rounded corners
+        },
+        // Alternative sidebar class for different margin options
+        '.sidebar-with-margin': {
+          margin: '1rem 0.75rem 1rem 1rem', // Custom margins: top right bottom left
+          borderRadius: '0.75rem',
+          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)', // Add subtle shadow
+          
+          // Ensure sidebar content is visible
+          '& .MuiListItemButton-root': {
+            color: `hsl(240, 5.3%, 26.1%)`, // Gray foreground text
+            borderRadius: '0.375rem',
+            margin: '0.125rem 0',
+            '&:hover': {
+              backgroundColor: `hsl(240, 4.8%, 95.9%)`, // Light gray hover
+              color: `hsl(240, 5.9%, 10%)` // Darker text on hover
+            },
+            '&.Mui-selected': {
+              backgroundColor: `hsl(240, 4.8%, 95.9%)`, // Light gray selected
+              color: `hsl(240, 5.9%, 10%)`, // Dark text when selected
+              fontWeight: 600
+            }
+          },
+          
+          // Sidebar menu text
+          '& .MuiListItemText-primary': {
+            color: `hsl(240, 5.3%, 26.1%)`, // Gray text
+            fontSize: '0.875rem',
+            fontWeight: 500
+          },
+          
+          // Sidebar icons
+          '& .MuiListItemIcon-root': {
+            color: `hsl(240, 5.3%, 26.1%)`, // Gray icons
+            minWidth: '40px'
+          }
         }
       }
     },
