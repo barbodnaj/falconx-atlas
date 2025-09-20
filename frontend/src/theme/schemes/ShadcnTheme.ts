@@ -5,8 +5,8 @@ import i18n from 'src/i18n/i18n';
 import '../fonts.css';
 
 const themeColors = {
-  // Modern shadcn admin dashboard colors - refined and professional
-  primary: 'hsl(222.2, 84%, 4.9%)', // Deep navy for primary actions
+  // Modern shadcn admin dashboard colors - refined and professional with blue accents
+  primary: 'hsl(217.2, 91.2%, 59.8%)', // Vibrant blue primary
   secondary: 'hsl(210, 40%, 98%)', // Clean light background
   success: 'hsl(142.1, 76.2%, 36.3%)', // Professional green
   warning: 'hsl(47.9, 95.8%, 53.1%)', // Vibrant amber
@@ -14,36 +14,36 @@ const themeColors = {
   info: 'hsl(221.2, 83.2%, 53.3%)', // Modern blue
   black: 'hsl(222.2, 84%, 4.9%)', // Rich dark foreground
   white: 'hsl(0, 0%, 100%)', // Pure white
-  primaryAlt: 'hsl(217.2, 32.6%, 17.5%)', // Darker navy variant
+  primaryAlt: 'hsl(217.2, 91.2%, 50%)', // Darker blue variant
   
-  // Core shadcn colors - updated for modern admin look
+  // Core shadcn colors - updated for modern admin look with blue accents
   background: 'hsl(0, 0%, 100%)', // Clean white background
   foreground: 'hsl(222.2, 84%, 4.9%)', // Rich dark text
   card: 'hsl(0, 0%, 100%)', // White cards
   cardForeground: 'hsl(222.2, 84%, 4.9%)', // Dark text on cards
   popover: 'hsl(0, 0%, 100%)', // White popover
   popoverForeground: 'hsl(222.2, 84%, 4.9%)', // Dark popover text
-  primaryForeground: 'hsl(210, 40%, 98%)', // Light text on primary
+  primaryForeground: 'hsl(0, 0%, 100%)', // White text on blue primary
   secondaryForeground: 'hsl(222.2, 84%, 4.9%)', // Dark text on secondary
-  muted: 'hsl(210, 40%, 96%)', // Subtle muted background
+  muted: 'hsl(220, 14.3%, 95.9%)', // Light blue-tinted muted background
   mutedForeground: 'hsl(215.4, 16.3%, 46.9%)', // Refined muted text
-  accent: 'hsl(210, 40%, 96%)', // Light accent
+  accent: 'hsl(220, 14.3%, 95.9%)', // Light blue accent
   accentForeground: 'hsl(222.2, 84%, 4.9%)', // Dark accent text
   destructive: 'hsl(0, 72.2%, 50.6%)', // Error red
   destructiveForeground: 'hsl(210, 40%, 98%)', // Light text on destructive
   border: 'hsl(214.3, 31.8%, 91.4%)', // Subtle borders
   input: 'hsl(214.3, 31.8%, 91.4%)', // Input background
-  ring: 'hsl(222.2, 84%, 4.9%)', // Focus ring
+  ring: 'hsl(217.2, 91.2%, 59.8%)', // Blue focus ring
   
-  // Enhanced sidebar colors for modern admin look
-  sidebarBackground: 'hsl(0, 0%, 100%)', // Clean white sidebar
-  sidebarForeground: 'hsl(215.4, 16.3%, 46.9%)', // Muted text
-  sidebarPrimary: 'hsl(222.2, 84%, 4.9%)', // Dark primary
-  sidebarPrimaryForeground: 'hsl(210, 40%, 98%)', // Light on primary
-  sidebarAccent: 'hsl(210, 40%, 96%)', // Light accent
-  sidebarAccentForeground: 'hsl(222.2, 84%, 4.9%)', // Dark accent text
-  sidebarBorder: 'hsl(214.3, 31.8%, 91.4%)', // Subtle border
-  sidebarRing: 'hsl(221.2, 83.2%, 53.3%)', // Blue ring
+  // Gray sidebar colors matching the provided CSS variables
+  sidebarBackground: 'hsla(0, 0%, 100%, 1.00)', // Light gray sidebar background
+  sidebarForeground: 'hsl(240, 5.3%, 26.1%)', // Gray foreground text
+  sidebarPrimary: 'hsl(240, 5.9%, 10%)', // Dark gray primary
+  sidebarPrimaryForeground: 'hsl(0, 0%, 98%)', // Light text on primary
+  sidebarAccent: 'hsl(240, 4.8%, 95.9%)', // Light gray accent
+  sidebarAccentForeground: 'hsl(240, 5.9%, 10%)', // Dark text on accent
+  sidebarBorder: 'hsl(220, 13%, 91%)', // Gray border
+  sidebarRing: 'hsl(217.2, 91.2%, 59.8%)', // Blue ring for focus
   
   // Modern chart colors - professional palette
   chart1: 'hsl(221.2, 83.2%, 53.3%)', // Modern blue
@@ -91,16 +91,16 @@ const colors = {
     sidebar: {
       background: themeColors.sidebarBackground,
       textColor: themeColors.sidebarForeground,
-      dividerBg: themeColors.sidebarBorder,
+      dividerBg: themeColors.sidebarBorder, // Gray dividers
       menuItemColor: themeColors.sidebarForeground,
-      menuItemColorActive: themeColors.sidebarPrimary,
+      menuItemColorActive: themeColors.sidebarAccentForeground,
       menuItemBg: 'transparent',
       menuItemBgActive: themeColors.sidebarAccent,
       menuItemIconColor: themeColors.sidebarForeground,
-      menuItemIconColorActive: themeColors.sidebarPrimary,
+      menuItemIconColorActive: themeColors.sidebarAccentForeground,
       menuItemHeadingColor: themeColors.sidebarPrimary,
-      // Enhanced sidebar styling for modern admin look
-      borderRight: `1px solid ${themeColors.sidebarBorder}`,
+      // Gray sidebar styling
+      borderRight: `1px solid ${themeColors.sidebarBorder}`, // Add gray border
       padding: '1rem',
       menuItemPadding: '0.5rem 0.75rem',
       menuItemBorderRadius: '0.375rem',
@@ -462,19 +462,19 @@ export const ShadcnTheme = createTheme({
           '--card-foreground': '222.2 84% 4.9%',
           '--popover': '0 0% 100%',
           '--popover-foreground': '222.2 84% 4.9%',
-          '--primary': '222.2 84% 4.9%', // Modern navy primary
-          '--primary-foreground': '210 40% 98%',
+          '--primary': '217.2 91.2% 59.8%', // Vibrant blue primary
+          '--primary-foreground': '0 0% 100%',
           '--secondary': '210 40% 98%', // Clean light secondary
           '--secondary-foreground': '222.2 84% 4.9%',
-          '--muted': '210 40% 96%', // Refined muted
+          '--muted': '220 14.3% 95.9%', // Light blue-tinted muted
           '--muted-foreground': '215.4 16.3% 46.9%',
-          '--accent': '210 40% 96%',
+          '--accent': '220 14.3% 95.9%',
           '--accent-foreground': '222.2 84% 4.9%',
           '--destructive': '0 72.2% 50.6%',
           '--destructive-foreground': '210 40% 98%',
           '--border': '214.3 31.8% 91.4%', // Subtle modern border
           '--input': '214.3 31.8% 91.4%',
-          '--ring': '222.2 84% 4.9%',
+          '--ring': '217.2 91.2% 59.8%', // Blue focus ring
           // Modern chart colors
           '--chart-1': '221.2 83.2% 53.3%', // Modern blue
           '--chart-2': '142.1 76.2% 36.3%', // Professional green
@@ -482,17 +482,39 @@ export const ShadcnTheme = createTheme({
           '--chart-4': '0 72.2% 50.6%', // Clear red
           '--chart-5': '262.1 83.3% 57.8%', // Purple accent
           '--radius': '0.75rem', // Increased for modern look
-          // Enhanced sidebar variables
-          '--sidebar-background': '0 0% 100%', // Clean white
-          '--sidebar-foreground': '215.4 16.3% 46.9%', // Muted text
-          '--sidebar-primary': '222.2 84% 4.9%', // Dark primary
-          '--sidebar-primary-foreground': '210 40% 98%',
-          '--sidebar-accent': '210 40% 96%', // Light accent
-          '--sidebar-accent-foreground': '222.2 84% 4.9%',
-          '--sidebar-border': '214.3 31.8% 91.4%', // Subtle border
-          '--sidebar-ring': '221.2 83.2% 53.3%', // Blue ring
+          // Gray sidebar variables matching the provided CSS
+          '--sidebar-background': '0 0% 98%', // Light gray background
+          '--sidebar-foreground': '240 5.3% 26.1%', // Gray foreground
+          '--sidebar-primary': '240 5.9% 10%', // Dark gray primary
+          '--sidebar-primary-foreground': '0 0% 98%', // Light on primary
+          '--sidebar-accent': '240 4.8% 95.9%', // Light gray accent
+          '--sidebar-accent-foreground': '240 5.9% 10%', // Dark on accent
+          '--sidebar-border': '220 13% 91%', // Gray border
+          '--sidebar-ring': '217.2 91.2% 59.8%', // Blue ring for focus
           '--sidebar-width': '16rem',
           '--sidebar-width-icon': '3rem',
+          // AUI (Admin UI) variables from the provided CSS
+          '--aui-background': '0 0% 100%',
+          '--aui-foreground': '240 10% 3.9%',
+          '--aui-card': '0 0% 100%',
+          '--aui-card-foreground': '240 10% 3.9%',
+          '--aui-popover': '0 0% 100%',
+          '--aui-popover-foreground': '240 10% 3.9%',
+          '--aui-primary': '240 5.9% 10%',
+          '--aui-primary-foreground': '0 0% 98%',
+          '--aui-secondary': '240 4.8% 95.9%',
+          '--aui-secondary-foreground': '240 5.9% 10%',
+          '--aui-muted': '240 4.8% 95.9%',
+          '--aui-muted-foreground': '240 3.8% 46.1%',
+          '--aui-accent': '240 4.8% 95.9%',
+          '--aui-accent-foreground': '240 5.9% 10%',
+          '--aui-destructive': '0 84.2% 60.2%',
+          '--aui-destructive-foreground': '0 0% 98%',
+          '--aui-border': '240 5.9% 90%',
+          '--aui-input': '240 5.9% 90%',
+          '--aui-ring': '240 10% 3.9%',
+          '--aui-radius': '.5rem',
+          '--aui-thread-max-width': '42rem',
           // Modern spacing and sizing
           '--header-height': '4rem',
           '--content-padding': '1.5rem',
