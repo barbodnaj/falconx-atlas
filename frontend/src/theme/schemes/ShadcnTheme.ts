@@ -34,13 +34,13 @@ const themeColors = {
   input: 'hsl(0, 0%, 89.8%)', // --input: 0 0% 89.8%
   ring: 'hsl(0, 0%, 3.9%)', // --ring: 0 0% 3.9%
   // Sidebar specific colors
-  sidebarBackground: 'hsl(0, 0%, 95%)', // --sidebar-background: light gray-white
+  sidebarBackground: '#fcfbfc', // --sidebar-background: light gray-white
   sidebarForeground: 'hsl(0, 0%, 10%)', // --sidebar-foreground: black for visibility
   sidebarPrimary: 'hsl(0, 0%, 10%)', // --sidebar-primary: black for text/icons
   sidebarPrimaryForeground: 'hsl(0, 0%, 98%)', // --sidebar-primary-foreground: 0 0% 98%
   sidebarAccent: 'hsl(0, 0%, 90%)', // --sidebar-accent: gray-white accent
   sidebarAccentForeground: 'hsl(0, 0%, 10%)', // --sidebar-accent-foreground: black for text
-  sidebarBorder: 'hsl(0, 0%, 87%)', // --sidebar-border: gray-white border
+  sidebarBorder: '#f2f5f9', // --sidebar-border: gray-white border
   sidebarRing: 'hsl(217.2, 91.2%, 59.8%)', // --sidebar-ring: 217.2 91.2% 59.8%
   // Chart colors
   chart1: 'hsl(12, 76%, 61%)', // --chart-1: 12 76% 61%

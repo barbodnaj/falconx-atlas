@@ -39,7 +39,7 @@ public class DemoController {
         userSignupRequest.setPassword("demo1234");
         userSignupRequest.setPhone(UUID.randomUUID().toString().replace("-", ""));
         userSignupRequest.setCompanyName("Demo");
-        userSignupRequest.setLanguage(Language.EN);
+        userSignupRequest.setLanguage(Language.FA);
         userSignupRequest.setDemo(true);
         SignupSuccessResponse<OwnUser> response = userService.signup(userSignupRequest);
         return new SuccessResponse(response.isSuccess(), response.getMessage());

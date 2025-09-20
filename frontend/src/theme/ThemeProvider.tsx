@@ -24,14 +24,19 @@ const ThemeProviderWrapper: React.FC = (props) => {
   const theme = themeCreator(themeName);
   const { i18n } = useTranslation();
   const rtl = i18n.dir() === 'rtl';
+  console.log('themeName1', {themeName});
+
   const setThemeName = (themeName: string): void => {
-    localStorage.setItem('appTheme', themeName);
-    _setThemeName(themeName);
+    console.log('themeName', {themeName});
+    localStorage.setItem('appTheme', 'ShadcnTheme');
+    _setThemeName('ShadcnTheme');
   };
 
   useEffect(() => {
     if (rtl) document.documentElement.setAttribute('dir', 'rtl');
     else document.documentElement.removeAttribute('dir');
+    console.log('themeName2', {rtl, themeName});
+
   }, [rtl]);
 
   const providers = (

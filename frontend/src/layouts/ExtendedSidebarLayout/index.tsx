@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
 import Header from './Header';
+import ThemeSettings from './../../components/ThemeSettings';
 
 interface ExtendedSidebarLayoutProps {
   children?: ReactNode;
@@ -58,7 +59,7 @@ const ExtendedSidebarLayout: FC<ExtendedSidebarLayoutProps> = () => {
           <Box display="block">
             <Outlet />
           </Box>
-          {/*<ThemeSettings />*/}
+          <ThemeSettings />
         </Box>
       </Box>
     </>

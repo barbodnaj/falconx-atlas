@@ -253,9 +253,9 @@ declare module '@mui/material/styles' {
 }
 
 const themeMap: { [key: string]: Theme } = {
-  PureLightTheme,
-  GreyGooseTheme,
-  PurpleFlowTheme,
+  // PureLightTheme,
+  // GreyGooseTheme,
+  // PurpleFlowTheme,
   BlackWhiteTheme,
   ShadcnTheme
 };

@@ -162,7 +162,7 @@ public class ApiApplication implements CommandLineRunner {
         signupRequest.setPhone("");
         signupRequest.setCompanyName("Super Admin");
         signupRequest.setEmployeesCount(3);
-        signupRequest.setLanguage(Language.EN);
+        signupRequest.setLanguage(Language.FA);
         return signupRequest;
     }
 }

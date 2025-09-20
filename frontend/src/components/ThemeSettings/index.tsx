@@ -180,13 +180,17 @@ const ThemeSettings: FC = () => {
   };
 
   const setThemeName = useContext(ThemeContext);
-  const curThemeName = localStorage.getItem('appTheme') || 'PureLightTheme';
+  const curThemeName = localStorage.getItem('appTheme') || 'ShadcnTheme';
 
   const [theme, setTheme] = useState(curThemeName);
 
   const changeTheme = (theme): void => {
-    setTheme(theme);
-    setThemeName(theme);
+    // setTheme(theme);
+    // setThemeName(theme);
+
+    setTheme('ShadcnTheme');
+    setThemeName('ShadcnTheme');
+
   };
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -342,7 +346,7 @@ const ThemeSettings: FC = () => {
                 <ButtonWrapper
                   className={theme === 'PureLightTheme' ? 'active' : ''}
                   onClick={() => {
-                    changeTheme('PureLightTheme');
+                    changeTheme('ShadcnTheme');
                   }}
                 >
                   {theme === 'PureLightTheme' && (
